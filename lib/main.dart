@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'src/screens.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,20 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHome(),
-    );
-  }
-}
-
-class MyHome extends StatelessWidget {
-  const MyHome({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Provider Example'),
-      ),
+      home: const FishOrder(),
     );
   }
 }
