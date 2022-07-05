@@ -141,6 +141,11 @@ class SpicyC extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20.0),
+        ElevatedButton(
+          onPressed: () =>
+              Provider.of<Fish>(context, listen: false).changeFishNumber(),
+          child: const Text('Change fish number'),
+        ),
       ],
     );
   }

@@ -5,6 +5,7 @@
 ### 주요 실습기능
 
 * Provider를 이용한 state management
+* Mixins
 
 ### 특이사항
 
