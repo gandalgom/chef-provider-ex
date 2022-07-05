@@ -1,5 +1,5 @@
 class Fish {
-  Fish(this.name, this.number, this.size);
+  Fish({required this.name, required this.number, required this.size});
 
   final String name;
   final int number;

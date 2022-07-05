@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'models.dart';
 
 class High extends StatelessWidget {
   const High({Key? key}) : super(key: key);
@@ -24,25 +27,25 @@ class SpicyA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         Text(
-          'Fish Number',
-          style: TextStyle(
+          'Fish Number: ${Provider.of<Fish>(context).number}',
+          style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
         Text(
-          'Fish Size',
-          style: TextStyle(
+          'Fish Size: ${Provider.of<Fish>(context).size}',
+          style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 20.0),
-        Middle(),
+        const SizedBox(height: 20.0),
+        const Middle(),
       ],
     );
   }
@@ -72,25 +75,25 @@ class SpicyB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         Text(
-          'Fish Number',
-          style: TextStyle(
+          'Fish Number: ${Provider.of<Fish>(context).number}',
+          style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
         Text(
-          'Fish Size',
-          style: TextStyle(
+          'Fish Size: ${Provider.of<Fish>(context).size}',
+          style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 20.0),
-        Low(),
+        const SizedBox(height: 20.0),
+        const Low(),
       ],
     );
   }
@@ -120,24 +123,24 @@ class SpicyC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children: [
         Text(
-          'Fish Number',
-          style: TextStyle(
+          'Fish Number: ${Provider.of<Fish>(context).number}',
+          style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
         Text(
-          'Fish Size',
-          style: TextStyle(
+          'Fish Size: ${Provider.of<Fish>(context).size}',
+          style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 20.0),
+        const SizedBox(height: 20.0),
       ],
     );
   }

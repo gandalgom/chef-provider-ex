@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'models.dart';
 import 'widgets.dart';
 
 class FishOrder extends StatelessWidget {
@@ -13,10 +15,12 @@ class FishOrder extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          children: const [
-            Text('Fish Name', style: TextStyle(fontSize: 20.0)),
-            SizedBox(height: 20.0),
-            High(),
+          children: [
+            Text('Fish Name: ${Provider.of<Fish>(context).name}',
+              style: const TextStyle(fontSize: 20.0),
+            ),
+            const SizedBox(height: 20.0),
+            const High(),
           ],
         ),
       ),

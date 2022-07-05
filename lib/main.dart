@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'src/models.dart';
 import 'src/screens.dart';
 
 void main() {
@@ -12,12 +14,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Provider Example',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Provider(
+      create: (context) => Fish(name: 'Salmon', number: 10, size: 'big'),
+      child: MaterialApp(
+        title: 'Provider Example',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const FishOrder(),
       ),
-      home: const FishOrder(),
     );
   }
 }
