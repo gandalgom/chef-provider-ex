@@ -26,27 +26,30 @@ class SpicyA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'Fish Number: ${Provider.of<Fish>(context).number}',
-          style: const TextStyle(
-            fontSize: 16.0,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Fish Number: ${Provider.of<Fish>(context).number}',
+            style: const TextStyle(
+              fontSize: 16.0,
+              color: Colors.red,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        Text(
-          'Fish Size: ${Provider.of<Fish>(context).size}',
-          style: const TextStyle(
-            fontSize: 16.0,
-            color: Colors.red,
-            fontWeight: FontWeight.bold,
+          Text(
+            'Fish Size: ${Provider.of<Fish>(context).size}',
+            style: const TextStyle(
+              fontSize: 16.0,
+              color: Colors.red,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        const SizedBox(height: 20.0),
-        const Middle(),
-      ],
+          const SizedBox(height: 20.0),
+          const Middle(),
+        ],
+      ),
     );
   }
 }
@@ -77,7 +80,7 @@ class SpicyB extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Fish Number: ${Provider.of<Fish>(context).number}',
+          'Tuna Number: ${Provider.of<SeaFish>(context).number}',
           style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
@@ -85,12 +88,18 @@ class SpicyB extends StatelessWidget {
           ),
         ),
         Text(
-          'Fish Size: ${Provider.of<Fish>(context).size}',
+          'Tuna Size: ${Provider.of<SeaFish>(context).size}',
           style: const TextStyle(
             fontSize: 16.0,
             color: Colors.red,
             fontWeight: FontWeight.bold,
           ),
+        ),
+        const SizedBox(height: 20.0),
+        ElevatedButton(
+          onPressed: () =>
+              Provider.of<SeaFish>(context, listen: false).changeSeaFishNumber(),
+          child: const Text('Change sea-fish number'),
         ),
         const SizedBox(height: 20.0),
         const Low(),

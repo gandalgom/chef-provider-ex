@@ -15,6 +15,7 @@ class FishOrder extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Fish Name: ${Provider.of<Fish>(context).name}',
               style: const TextStyle(fontSize: 20.0),

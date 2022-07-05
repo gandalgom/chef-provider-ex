@@ -14,8 +14,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Fish(name: 'Salmon', number: 10, size: 'big'),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => Fish(name: 'Salmon', number: 10, size: 'Big'),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => SeaFish(name: 'Tuna', number: 0, size: 'Middle'),
+        ),
+      ],
       child: MaterialApp(
         title: 'Provider Example',
         theme: ThemeData(

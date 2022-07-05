@@ -12,3 +12,16 @@ class Fish with ChangeNotifier {
     notifyListeners();
   }
 }
+
+class SeaFish with ChangeNotifier {
+  SeaFish({required this.name, required this.number, required this.size});
+
+  final String name;
+  int number;
+  final String size;
+
+  void changeSeaFishNumber() {
+    number++;
+    notifyListeners();
+  }
+}
